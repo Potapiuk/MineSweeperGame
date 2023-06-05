@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <link href="styles/styles.css" rel="stylesheet"/>
+  
+  <head>
+    <meta charset="UTF-8">
+    <title>Гра Сапер</title>
+    <link rel="icon" href="images/mine.png">
+  </head>
+  
+  <body>
+    <h1>Гра Сапер</h1>
+    <div class="flexBoxColumn" style="align-items: center;">
+      <div id="setupScreenId" class="setupScreen">
+        <div class="flexBoxRow" style="justify-content: space-between;">
+          Ширина ↔ : <input id="widthTextboxId" type="number" min="1" placeholder="W" style="width: 4em; text-align: center; font-size: 20px; margin: 0px 10px;">
+        </div>
+        <div class="flexBoxRow" style="justify-content: space-between;">
+          Висота ↕ : <input id="heightTextboxId" type="number" min="1" placeholder="H" style="width: 4em; text-align: center; font-size: 20px; margin: 0px 10px;">
+        </div>
+        <div class="flexBoxRow" style="justify-content: space-between; align-items: center;">
+          Кількість&nbsp;<img src="images/mine.png" width="20" height="20">&nbsp;Мін: <input id="mineCountTextboxId" type="number" min="1" placeholder="M" style="width: 4em; text-align: center; font-size: 20px; margin: 0px 10px;">
+        </div>
+        <br>
+        <div class="flexBoxColumn" style="align-items: flex-start;">
+          <div>
+            <input type="radio" id="beginnerRadioId" name="difficulty" value="Початківець">
+            <label for="beginnerRadioId">Початківець</label>
+          </div>
+          <div>
+            <input type="radio" id="intermediateRadioId" name="difficulty" value="Середнячок">
+            <label for="intermediateRadioId">Середнячок</label>
+          </div>
+          <div>
+            <input type="radio" id="expertRadioId" name="difficulty" value="Експерт">
+            <label for="expertRadioId">Експерт</label>
+          </div>
+          <div>
+            <input type="radio" id="customRadioId" name="difficulty" value="Кастом">
+            <label for="customRadioId">Кастом</label>
+          </div>
+        </div>
+        <br>
+        <button id="startButtonId" class="font-awesome-icons" title="Start" style="width: 100%; border-radius: 14px;">Почати</button>
+      </div>
+      <div id="gameScreenId" class="gameScreen" hidden>
+        <div class="flexBoxRow statusBar">
+          <button id="resetButtonId" class="font-awesome-icons" title="Reset">⟳</button>
+          <div class="flexBoxRow" style="align-items: center;">
+            <div id="infoLabelId" style="padding: 0px 10px;"></div>
+          </div>
+          <div id="minesRemainingLabelId" style="padding: 0px 10px;"></div>
+          <div id="timerLabelId" style="padding: 0px 10px;">0</div>
+        </div>
+        <div id="mineFieldId" class="mineFieldContainer"></div>
+      </div>
+    </div>
+  </body>
+  
+  <script src="scripts/main.js" type="module"></script>
+</html>
